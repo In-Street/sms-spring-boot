@@ -1,0 +1,3 @@
+# Project exclude paths
+/sms-spring-boot-autoconfigure/target/
+/sms-spring-boot-starter/target/

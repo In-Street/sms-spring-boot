@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>sms-spring-boot</artifactId>
+        <groupId>cn.anony.boot</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+
+<!--    该模块是一个空jar。它唯一目的是提供必要的依赖项来使用starter。
+starter必须直接或间接引用核心Spring Boot启动器（spring-boot-starter）（如果您的启动器依赖于另一个启动器，则无需添加它）。
+如果只使用自定义启动器创建项目，则Spring Boot的核心功能将通过核心启动器的存在来实现。-->
+    <artifactId>sms-spring-boot-starter</artifactId>
+
+
+<dependencies>
+    <dependency>
+        <groupId>cn.anony.boot</groupId>
+        <artifactId>sms-spring-boot-autoconfigure</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <version>${spring-boot.version}</version>
+    </dependency>
+</dependencies>
+</project>
