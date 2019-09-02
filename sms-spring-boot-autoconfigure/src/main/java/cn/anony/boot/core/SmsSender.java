@@ -21,7 +21,7 @@ public class SmsSender {
     String secret;
 
     public String send() {
-        log.info(">>>>>>发送 开始");
+        log.info(">>>>>>发送 开始:key - {},secret - {}", key, secret);
         try {
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {

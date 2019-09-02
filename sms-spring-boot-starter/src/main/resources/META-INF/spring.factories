@@ -1,1 +1,3 @@
-providers: sms-spring-boot-autoconfigure
+#启动时就集成starter,不添加时使用@Enablexxx方式
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#cn.anony.boot.SmsAutoConfiguration

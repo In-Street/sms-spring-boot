@@ -22,7 +22,7 @@ public class SmsProperties {
     @Data
     public static class Ali {
 
-        private String key;
+        private String keyString;
 
         private String secret;
     }
