@@ -46,3 +46,9 @@
     3. 若是被动生效方式，没有EnableSms注解类，则需要在resources/META-INF/spring.factories 添加
 
 ```
+
+3. 本地仓库生成maven引用包：
+
+```
+    1. clean & compile & install
+```
