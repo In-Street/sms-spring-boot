@@ -52,3 +52,47 @@
 ```
     1. clean & compile & install
 ```
+
+4. 自定义starter被使用时，使用方在配置yml/properties时属性提示，做以下配置
+
+     ```
+   
+        1. 属性类： @ConfigutationProperties ,指定 prefix
+   
+        2. 配置类开启：@EnableConfigurationProperties ，指定属性类
+   
+        3. 若属性类中有引入其他类作为成员变量时，添加 @NestedConfigurationProperty 
+   
+        
+        @Data
+        public class School {
+            private Integer no;
+            private String name;
+            private String address;
+        }
+        @Data
+        @ConfigurationProperties(prefix = "jiuxian")
+        public class JiuxianProperties {
+            private String name;
+            private String nameCn;
+            private String nameEn;
+            private String[] hobbies;
+            private SexEnum sexEnum;
+            private boolean single;
+
+            @NestedConfigurationProperty
+            private School school;
+   
+            private City city;
+        
+            enum SexEnum {
+                MAN, WOMAN
+            }
+        
+            @Data
+            static class City {
+                private String no;
+                private String name;
+            }
+        }
+   ```
